@@ -1,11 +1,11 @@
-<<<<<<< HEAD
-# Introducing
+0# Introducing
 
 
 ## Frameworks
 node.js
 inquirer.js
 
+https://www.npmjs.com/package/inquirer
 
 
 
@@ -27,33 +27,3 @@ inquirer.js
 
 
 
-=======
-# Introducing
-
-
-## Frameworks
-node.js
-inquirer.js
-
-
-
-
-## Summary
-
-
-
-## File Structure
-
-
-## Approach
-
-
-
-
-
-
-## File Structure
-
-
-
->>>>>>> 879af14 (create project dir structure and create classes)
