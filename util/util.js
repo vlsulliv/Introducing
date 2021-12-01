@@ -1,1 +1,3 @@
-let typeCheck = function()
+let typeCheck = function(){
+    
+}
