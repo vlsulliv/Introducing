@@ -9,7 +9,7 @@ Table to Contents
   - [Description](#description)
   - [Usage](#usage)
   - [Frameworks](#frameworks)
-  - [Summary](#summary)
+  - [Credit](#credit)
   - [File Structure](#file-structure)
   - [Approach](#approach)
 
@@ -26,9 +26,9 @@ Open a command line and enter `node index.js` command.
 &nbsp;  [Jest](https://www.npmjs.com/package/jest)
 
 
-## Summary
+## Credit
 
-
+[Icons](https://icon-icons.com/)
 
 ## File Structure
 

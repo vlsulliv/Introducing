@@ -1,91 +1,124 @@
-const inquirer = require("inquirer");
-const fs = require("fs")
-const Engineer = require("./lib/Engineer");
-const Manager = require("./lib/Manager");
-const Intern = require("./lib/Intern");
+const inquirer = require('inquirer');
+const Engineer = require('./lib/Engineer');
+const Manager = require('./lib/Manager');
+const Intern = require('./lib/Intern');
+const util = require('./src/util')
 const path = require('path');
-const fs = require('fs')
+const fs = require('fs');
+const CheckboxPrompt = require("inquirer/lib/prompts/checkbox");
 
 let team = [];
 
 
 inquirer.prompt([
     {
-      name: "Enter team name or project",
       type: "input",
+      name: "Enter team name or project",
       message: "You will not enter Manager information"
     },
-    {   
-      name: "Enter managers name: ",
+    new inquirer.Separator("----Manager Info----"),
+    {
       type: "input",
+      name: "Manager Name ",
+      message: "Enter managers name: ",
     },
-    {   
-      name: "manager's employee ID: ",
+     new inquirer.Separator(),
+    {
       type: "input",
+      name: "Manager ID ",
+      message: "Enter manager's employee ID: ",
     },
-    {   
-      name: "Enter manager's email address: ",
+     new inquirer.Separator(),
+    {
       type: "input",
+      name: "Manager Email ",
+      message: "Enter manager's email address: ",
     },
-    {   
-      name: "Enter manager's office number: ",
+     new inquirer.Separator(),
+    { 
       type: "input",
+      name: "Manager Office Number",  
+      message: "Enter manager's office number: ",
     },
+     new inquirer.Separator(),
+    // -----------------------------------------------------
+    {
+      name: "menu",
+      type: "checkbox",
+      message: "Add team member or exit? select below",
+      choices: ['add engineer', 'add intern', 'exit and build html']
+    },
+    // -----------------------------------------------------
     // prompted to add team member or finish and build team html
-    {   
-      name: "Enter engineer’s name: ",
-      type: "input",
-    },
+    new inquirer.Separator("----engineer Info----"),
     {
-      name : "engineer’s ID: ",
-      type: "input",
+      type: "input",   
+      name: "Engineer name"
+      message: "Enter engineer’s name: ",
     },
+    new inquirer.Separator(),
     {
-      name : "engineer’s email: ",
       type: "input",
+      name: "Engineer ID"
+      message : "Enter engineer’s ID: ",
+
     },
+    new inquirer.Separator(),
     {
-      name : "engineer’s GitHub username: ",
       type: "input",
+      name: "Engineer Email",
+      message : "Enter engineer’s email: ",
     },
-    // Go back to menu
+    new inquirer.Separator(),
     {
-      name : "Intern name: ",
       type: "input",
+      name: "Engineer Github",
+      message : "Enter engineer’s GitHub username: ",
+
+    },
+    new inquirer.Separator(),
+    // -----------------------------------------------------
+    {
+      name: "menu",
+      type: "checkbox",
+      message: "Add team member or exit? select below",
+      choices: ['add engineer', 'add intern', 'exit and build html']
+    },
+    // -----------------------------------------------------
+    new inquirer.Separator("----intern Info----"),
+    {
+      type: "input",
+      name:"Intern Name ",
+      message: "Enter intern name: ",
+      
     },
     
     {
-      name : "Intern ID: ",
       type: "input",
+      name:"Intern ID",
+      message: "Enter intern ID: ",
+      
     },
     {
-      name : "Intern email: ",
       type: "input",
+      name:"Intern Email",
+      message: "Enter intern email: ",
+      
     },
     {
-      name : "Intern school: ",
       type: "input",
+      name:"Intern School",
+      message: "Enter intern school: ",
     },
-    // back to menu
-
+    // -----------------------------------------------------
     {
-      name: "confirm_answer",
-      type: "confirm",
-      message: "Are you sure?",
-      when: (answers) => answers.wants_pizza === false,
-    },
-  {
-    name: "confirm_answer",
-    type: "confirm",
-    message: "Are you sure?",
-    when: (answers) => answers.wants_pizza === false,
-    },
-  {
-    name: "confirm_answer",
-    type: "confirm",
-    message: "Are you sure?",
-    when: (answers) => answers.wants_pizza === false,
-  }])
+      name: "menu",
+      type: "checkbox",
+      message: "Add team member or exit? select below",
+      choices: ['add engineer', 'add intern', 'exit and build html']
+    },     
+    // -----------------------------------------------------
+  ])
   .then((answers) => {
     if (answers.wants_pizza) {
       console.log("The user wants free pizza");
