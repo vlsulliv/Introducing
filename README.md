@@ -28,7 +28,8 @@ Open a command line and enter `node index.js` command.
 
 ## Credit
 
-[Icons](https://icon-icons.com/)
+[Icons](https://icon-icons.com/)<br>
+[Website Templates](https://bootsnipp.com/snippets/92xNm)<br>
 
 ## File Structure
 
