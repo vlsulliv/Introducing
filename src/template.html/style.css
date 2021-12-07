@@ -33,9 +33,10 @@ section .section-title {
     text-transform: uppercase;
 }
 
-#team .card {
-    border: none;
-    background: #ffffff;
+.team#card {
+    border: solid;
+    border-width: 5px;
+    background: #262626;
 }
 
 .image-flip:hover .backside,
@@ -61,7 +62,6 @@ section .section-title {
     -webkit-transform-style: preserve-3d;
     -ms-transition: 1s;
     -moz-transition: 1s;
-    -moz-transform: perspective(1000px);
     -moz-transform-style: preserve-3d;
     -ms-transform-style: preserve-3d;
     transition: 1s;
@@ -71,8 +71,6 @@ section .section-title {
 
 .frontside {
     position: relative;
-    -webkit-transform: rotateY(0deg);
-    -ms-transform: rotateY(0deg);
     z-index: 2;
     margin-bottom: 30px;
 }

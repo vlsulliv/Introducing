@@ -19,6 +19,12 @@
   "homepage": "https://github.com/vlsulliv/team-profile-generator#readme",
   "dependencies": {
     "inquirer": "^8.2.0",
+    "nodemon": "^2.0.15"
+  },
+  "devDependencies": {
     "jest": "^27.4.3"
+  },
+  "directories": {
+    "lib": "lib"
   }
 }

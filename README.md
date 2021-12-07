@@ -8,6 +8,7 @@ Table to Contents
 - [Team Profile Generator](#team-profile-generator)
   - [Description](#description)
   - [Usage](#usage)
+  - [db](#db)
   - [Frameworks](#frameworks)
   - [Credit](#credit)
   - [File Structure](#file-structure)
@@ -16,6 +17,32 @@ Table to Contents
 ## Usage
 
 Open a command line and enter `node index.js` command.
+
+## db
+
+```
+DB:
+Tables:
+1. departments:
+        department names
+        department ids
+
+2. roles:
+        job title,
+        role id,
+        department
+        salary for that role
+
+3. employee:
+        ids,
+        first names,
+        last names,
+        job titles,
+        departments,
+        salaries, and
+        managers that the
+        employees report to
+```
 
 ## Frameworks
 &nbsp;	node.js<br>
@@ -35,5 +62,7 @@ Open a command line and enter `node index.js` command.
 
 
 ## Approach
+
+
 
 
